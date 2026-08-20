@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <meta name="theme-color" content="#0b1020">
+
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>My Futures</title>
+</head>
+
+<body>
+
+<div class="app">
+
+  <header class="header">
+
+    <div>
+      <h1>My Futures</h1>
+      <p>حاسبة Binance Futures</p>
+    </div>
+
+    <span class="status">تجريبي</span>
+
+  </header>
+
+
+  <section class="card stats">
+
+    <div>
+      <span>الرصيد</span>
+      <strong id="balanceDisplay">1,000</strong>
+      <small>USDT</small>
+    </div>
+
+    <div>
+      <span>مبلغ المخاطرة</span>
+      <strong id="riskDisplay">15</strong>
+      <small>USDT</small>
+    </div>
+
+    <div>
+      <span>PNL الأسبوعي</span>
+      <strong>—</strong>
+      <small>USDT</small>
+    </div>
+
+  </section>
+
+
+  <section class="card">
+
+    <h2>إعداد الصفقة</h2>
+
+
+    <label>الرصيد USDT</label>
+
+    <input
+      id="balance"
+      type="number"
+      inputmode="decimal"
+      value="1000"
+      min="0"
+    >
+
+
+    <label>نسبة المخاطرة %</label>
+
+    <input
+      id="risk"
+      type="number"
+      inputmode="decimal"
+      value="1.5"
+      min="0.01"
+      max="100"
+      step="0.1"
+    >
+
+
+    <label>العملة</label>
+
+    <input
+      id="symbol"
+      type="text"
+      value="BTCUSDT"
+      autocapitalize="characters"
+    >
+
+
+    <label>الاتجاه</label>
+
+    <div class="directionButtons">
+
+      <button
+        id="longButton"
+        class="direction active"
+      >
+        LONG
+      </button>
+
+      <button
+        id="shortButton"
+        class="direction"
+      >
+        SHORT
+      </button>
+
+    </div>
+
+
+    <label>سعر الدخول</label>
+
+    <input
+      id="entry"
+      type="number"
+      inputmode="decimal"
+      placeholder="مثال: 100000"
+    >
+
+
+    <label>وقف الخسارة</label>
+
+    <input
+      id="stop"
+      type="number"
+      inputmode="decimal"
+      placeholder="مثال: 98000"
+    >
+
+
+    <div id="error" class="error hidden"></div>
+
+
+    <div class="results">
+
+      <div>
+        <span>مبلغ المخاطرة</span>
+        <strong id="riskAmount">—</strong>
+      </div>
+
+      <div>
+        <span>المسافة إلى الوقف</span>
+        <strong id="distance">—</strong>
+      </div>
+
+      <div>
+        <span>حجم الصفقة</span>
+        <strong id="quantity">—</strong>
+      </div>
+
+      <div>
+        <span>القيمة الاسمية</span>
+        <strong id="notional">—</strong>
+      </div>
+
+    </div>
+
+
+    <button
+      id="calculate"
+      class="calculate"
+    >
+      احسب حجم الصفقة
+    </button>
+
+  </section>
+
+
+  <section class="card security">
+
+    <h2>🔐 الأمان</h2>
+
+    <p>
+      هذه النسخة لا تحتوي على Binance API Key
+      ولا تستطيع سحب أو تحويل الأموال.
+    </p>
+
+    <p>
+      عند ربط Binance لاحقًا سيتم استخدام API
+      بصلاحية التداول فقط مع تعطيل السحب.
+    </p>
+
+  </section>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
