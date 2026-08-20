@@ -1,0 +1,12 @@
+{
+  "name": "My Futures",
+  "short_name": "My Futures",
+  "description": "حاسبة إدارة مخاطر Binance Futures",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
+  "orientation": "portrait",
+  "lang": "ar",
+  "dir": "rtl"
+}
